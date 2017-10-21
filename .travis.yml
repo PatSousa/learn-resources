@@ -9,7 +9,7 @@ addons:
 
 before_install:
   - export DEBUG=False
-  - export DABATASE_URL=postgres://postgres@localhost/travisdb
+  - export DATABASE_URL=postgres://postgres@localhost/travisdb
 
 install:
   - pip install -r requirements.txt

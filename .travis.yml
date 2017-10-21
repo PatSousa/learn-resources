@@ -1,0 +1,17 @@
+## Customize the test machine
+machine:
+
+  timezone:
+    Europe/Netherlands
+
+  # Version of python to use
+  python:
+    version: 3.6.3
+
+dependencies:
+  pre:
+    - pip install -r requirements.txt
+
+test:
+  override:
+    - python manage.py test --settings=learn_resources.testsettings

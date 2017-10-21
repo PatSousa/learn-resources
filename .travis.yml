@@ -1,17 +1,24 @@
 ## Customize the test machine
-machine:
+language: python
 
-  timezone:
-    Europe/Netherlands
+python:
+  - 3.6.3
 
-  # Version of python to use
-  python:
-    version: 3.6.3
+addons:
+  - postgresql: "9.5"
 
-dependencies:
-  pre:
-    - pip install -r requirements.txt
+before_install:
+  - export DEBUG=False
+  - export DABATASE_URL=postgres://postgres@localhost/travisdb
 
-test:
-  override:
-    - python manage.py test --settings=learn_resources.testsettings
+install:
+  - pip install -r requirements.txt
+
+#before_script:
+#  - psql -c "CREATE DATABASE travisdb;" -U postgres
+#  - python learn_resources/manage.py migrate --noinput
+
+env:
+  - DJANGO=1.11
+
+script: python manage.py test

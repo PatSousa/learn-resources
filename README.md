@@ -1,9 +1,9 @@
 # REST API to hold learn resources
 
 ## Installation
-    #. create virtual environment
-    #. `pip install -r requirements.txt`
-    #. `./manage.py migrate`
+    1. create virtual environment
+    2. pip install -r requirements.txt
+    3. ./manage.py migrate
 
 ## Purpose
 

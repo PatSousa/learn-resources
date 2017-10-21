@@ -21,4 +21,4 @@ install:
 env:
   - DJANGO=1.11
 
-script: python manage.py test --settings=testsettings
+script: python manage.py test --settings=learn_resources.testsettings

@@ -14,4 +14,4 @@ dependencies:
 
 test:
   override:
-    - python manage.py test
+    - python manage.py test --settings=learn_resources.testsettings

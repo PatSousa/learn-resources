@@ -9,7 +9,6 @@ addons:
 
 before_install:
   - export DEBUG=False
-  - export DATABASE_URL=postgres://postgres@localhost/travisdb
 
 install:
   - pip install -r requirements.txt
@@ -17,6 +16,6 @@ install:
 env:
   - DJANGO=1.11
 
-script: python manage.py test --settings=tst
+script: python manage.py test --settings=settings.tst
 
 cache: pip

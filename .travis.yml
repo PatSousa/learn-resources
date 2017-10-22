@@ -18,3 +18,5 @@ env:
   - DJANGO=1.11
 
 script: python manage.py test --settings=tst
+
+cache: pip
